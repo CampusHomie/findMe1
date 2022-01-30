@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter_gmaps/.env.dart';
 import 'package:flutter_gmaps/directions_model.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -9,7 +10,7 @@ class DirectionsRepository {
 
   final Dio _dio;
   
-  String googleAPIKey = "AIzaSyBeOyY9O2d-W3GzzGcEiUJf1dD5GqJRfjs";
+  //String googleAPIKey = "AIzaSyBeOyY9O2d-W3GzzGcEiUJf1dD5GqJRfjs";
 
   DirectionsRepository({Dio dio}) : _dio = dio ?? Dio();
 
