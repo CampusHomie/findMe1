@@ -28,7 +28,7 @@ class MapScreen extends StatefulWidget {
 
 class _MapScreenState extends State<MapScreen> {
   static const _initialCameraPosition = CameraPosition(
-    target: LatLng(0.3335, 32.5675),
+    target: LatLng(0.3499986, 32.567164398), //Sets initial position @Makerere university. 
     zoom: 11.5,
   );
 
@@ -48,7 +48,7 @@ class _MapScreenState extends State<MapScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: false,
-        title: const Text('Google Maps'),
+        title: const Text('FindMe'),
         actions: [
           if (_origin != null)
             TextButton(
