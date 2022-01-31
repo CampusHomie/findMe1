@@ -28,8 +28,8 @@ class MapScreen extends StatefulWidget {
 
 class _MapScreenState extends State<MapScreen> {
   static const _initialCameraPosition = CameraPosition(
-    target: LatLng(0.3499986, 32.567164398), //Sets initial position @Makerere university. 
-    zoom: 11.5,
+    target: LatLng(0.334873, 32.567497), //Sets initial position @Makerere university. 
+    zoom: 15.5,
   );
 
   GoogleMapController _googleMapController;
