@@ -4,7 +4,7 @@ class Dairy {
 
   Dairy();
 
-  Dairy.fromMap(Map<String, dynamic> map) {
+  Dairy.fromMap(Map<String, dynamic> map) 
     id = map['id'];
     title = map['title'];
     body = map['body'];
