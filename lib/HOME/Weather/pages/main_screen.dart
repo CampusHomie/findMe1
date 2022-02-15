@@ -101,7 +101,7 @@ class _MainScreenState extends State<MainScreen> {
                             padding:
                                 const EdgeInsets.symmetric(horizontal: 18.0),
                             child: Text(
-                                'Coolet is a simple app that will notify you with the live weather data of your local area and give you simple suggestions on what to wear/do'),
+                                'A simple weather feature that shows the weather data of your local area and give you simple suggestions on what to wear/do'),
                           ),
                         ),
                         Expanded(
@@ -109,7 +109,7 @@ class _MainScreenState extends State<MainScreen> {
                             text: TextSpan(
                               style: Theme.of(context).textTheme.bodyText2,
                               children: [
-                                TextSpan(text: "Made with love ❤️ in Ethiopia")
+                                TextSpan(text: "Courtsey of Group23")
                               ],
                             ),
                           ),

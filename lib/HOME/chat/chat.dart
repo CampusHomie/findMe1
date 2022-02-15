@@ -83,34 +83,6 @@ class ChannelPage extends StatefulWidget {
   _ChannelPageState createState() => _ChannelPageState();
 }
 
-// class _ChannelPageState extends State<ChannelPage> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-
-//     );
-//   }
-// }
-// class ChannelPage extends StatelessWidget {
-//   const ChannelPage({
-//     Key? key,
-//   }) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: const ChannelHeader(),
-//       body: Column(
-//         children: const <Widget>[
-//           Expanded(
-//             child: MessageListView(),
-//           ),
-//           MessageInput(),
-//         ],
-//       ),
-//     );
-//   }
-// }
 
 class _ChannelPageState extends State<ChannelPage> {
   Location.Location? location;
@@ -248,7 +220,7 @@ class _ChannelPageState extends State<ChannelPage> {
           Expanded(
             child: MessageListView(
               key: _messageInputKey,
-              // customAttachmentBuilders: {'location': _buildLocationMessage},
+               customAttachmentBuilders: {'location': _buildLocationMessage},
             ),
           ),
           MessageInput(
