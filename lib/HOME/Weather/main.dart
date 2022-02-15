@@ -4,7 +4,7 @@ import 'package:flutter_application_1/HOME/Weather/theme/theme_data.dart';
 import 'package:intl/intl.dart';
 import 'pages/loadingScreen.dart';
 
-void main() 
+void main() {
   runApp(const Coolet());
 }
 
