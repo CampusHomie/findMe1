@@ -220,7 +220,7 @@ class _ChannelPageState extends State<ChannelPage> {
           Expanded(
             child: MessageListView(
               key: _messageInputKey,
-               customAttachmentBuilders: {'location': _buildLocationMessage},
+               //customAttachmentBuilders: {'location': _buildLocationMessage},
             ),
           ),
           MessageInput(
