@@ -47,7 +47,7 @@ class MapView extends StatefulWidget {
 
 class _MapViewState extends State<MapView> {
   CameraPosition _initialLocation = CameraPosition(
-    target: LatLng(0.334873, 32.567497),
+    target: LatLng(0.333488, 32.568202),
     zoom: 15,
   );
   late GoogleMapController mapController;
@@ -77,17 +77,46 @@ class _MapViewState extends State<MapView> {
     markerId: MarkerId('_place1'),
     infoWindow: InfoWindow(
       title: 'DICTS Offices',
-      snippet: 'My custom subtitle',
+      snippet: 'Student portal and muele issues',
     ),
     icon: BitmapDescriptor.defaultMarker,
     position: LatLng(0.331331, 32.570553),
+  );
+
+  static final Marker _maryStuartGymMarker = Marker(
+    markerId: MarkerId('_place1'),
+    infoWindow: InfoWindow(
+      title: 'Gym',
+      snippet: 'Equipped with state of the art equipment',
+    ),
+    icon: BitmapDescriptor.defaultMarker,
+    position: LatLng(0.330588, 32.567492),
+  );
+
+  static final Marker _poolCourtMarker = Marker(
+    markerId: MarkerId('_place1'),
+    infoWindow: InfoWindow(
+      title: 'Pool Basketball court',
+      snippet: 'Available for basketball games',
+    ),
+    icon: BitmapDescriptor.defaultMarker,
+    position: LatLng(0.334608, 32.569307),
+  );
+  static final Marker _swimmingPoolMarker = Marker(
+    markerId: MarkerId('_place1'),
+    infoWindow: InfoWindow(
+      title: 'Swimming pool',
+      snippet: 'Free for Makerere students',
+    ),
+    icon: BitmapDescriptor.defaultMarker,
+    position: LatLng(0.335027, 32.569269),
   );
 
   static final Marker _SenateBuildingMarker = Marker(
     markerId: MarkerId('_SenateBuilding'),
     infoWindow: InfoWindow(
       title: 'Senate Building',
-      snippet: 'My custom subtitle',
+      snippet: 'IDs and Admission issues',
     ),
     icon: BitmapDescriptor.defaultMarker,
     position: LatLng(0.333192, 32.569493),
@@ -376,11 +405,14 @@ class _MapViewState extends State<MapView> {
               markers: {
                 _DICTSofficesMarker,
                 _SenateBuildingMarker,
+                _maryStuartGymMarker,
+                _swimmingPoolMarker,
+                _poolCourtMarker,
                 //Set<Marker>.from(markers)
               },
               initialCameraPosition: _initialLocation,
               myLocationEnabled: true,
-              myLocationButtonEnabled: false,
+              myLocationButtonEnabled: true,
               mapType: MapType.hybrid,
               zoomGesturesEnabled: true,
               zoomControlsEnabled: false,
@@ -446,7 +478,7 @@ class _MapViewState extends State<MapView> {
                   padding: const EdgeInsets.only(top: 10.0),
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Colors.white70,
+                      color: Colors.blueGrey[400],
                       borderRadius: BorderRadius.all(
                         Radius.circular(20.0),
                       ),
@@ -501,6 +533,7 @@ class _MapViewState extends State<MapView> {
                             child: Text(
                               'DISTANCE: $_placeDistance km',
                               style: TextStyle(
+                                color: Colors.black,
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -548,13 +581,13 @@ class _MapViewState extends State<MapView> {
                               child: Text(
                                 'Show Route'.toUpperCase(),
                                 style: TextStyle(
-                                  color: Colors.white,
+                                  color: Colors.black,
                                   fontSize: 20.0,
                                 ),
                               ),
                             ),
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.red,
+                              primary: Colors.blueAccent,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
